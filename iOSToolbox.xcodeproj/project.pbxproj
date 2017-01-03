@@ -14,6 +14,7 @@
 		86CAAB851E1B43A900995586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CAAB841E1B43A900995586 /* Assets.xcassets */; };
 		86CAAB881E1B43A900995586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86CAAB861E1B43A900995586 /* LaunchScreen.storyboard */; };
 		86CAAB931E1B43A900995586 /* iOSToolboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB921E1B43A900995586 /* iOSToolboxTests.m */; };
+		86CAABA21E1B447900995586 /* UIColor+HFYHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAABA11E1B447900995586 /* UIColor+HFYHEX.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		86CAAB8E1E1B43A900995586 /* iOSToolboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSToolboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CAAB921E1B43A900995586 /* iOSToolboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSToolboxTests.m; sourceTree = "<group>"; };
 		86CAAB941E1B43A900995586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86CAABA01E1B447900995586 /* UIColor+HFYHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HFYHEX.h"; sourceTree = "<group>"; };
+		86CAABA11E1B447900995586 /* UIColor+HFYHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HFYHEX.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		86CAAB771E1B43A800995586 /* iOSToolbox */ = {
 			isa = PBXGroup;
 			children = (
+				86CAAB9E1E1B445E00995586 /* Categories */,
 				86CAAB7B1E1B43A900995586 /* AppDelegate.h */,
 				86CAAB7C1E1B43A900995586 /* AppDelegate.m */,
 				86CAAB7E1E1B43A900995586 /* ViewController.h */,
@@ -109,6 +113,23 @@
 				86CAAB941E1B43A900995586 /* Info.plist */,
 			);
 			path = iOSToolboxTests;
+			sourceTree = "<group>";
+		};
+		86CAAB9E1E1B445E00995586 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				86CAAB9F1E1B445E00995586 /* UIColor */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		86CAAB9F1E1B445E00995586 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				86CAABA01E1B447900995586 /* UIColor+HFYHEX.h */,
+				86CAABA11E1B447900995586 /* UIColor+HFYHEX.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +239,7 @@
 				86CAAB801E1B43A900995586 /* ViewController.m in Sources */,
 				86CAAB7D1E1B43A900995586 /* AppDelegate.m in Sources */,
 				86CAAB7A1E1B43A800995586 /* main.m in Sources */,
+				86CAABA21E1B447900995586 /* UIColor+HFYHEX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +438,7 @@
 				86CAAB991E1B43A900995586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86CAAB9A1E1B43A900995586 /* Build configuration list for PBXNativeTarget "iOSToolboxTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +447,7 @@
 				86CAAB9C1E1B43A900995586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
