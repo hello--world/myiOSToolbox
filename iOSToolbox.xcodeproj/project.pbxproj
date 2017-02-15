@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86ADE9CB1E1CD3E6001E4783 /* UIView+HFYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ADE9CA1E1CD3E6001E4783 /* UIView+HFYFrame.m */; };
+		86ADE9CF1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ADE9CE1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m */; };
 		86CAAB7A1E1B43A800995586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB791E1B43A800995586 /* main.m */; };
 		86CAAB7D1E1B43A900995586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB7C1E1B43A900995586 /* AppDelegate.m */; };
 		86CAAB801E1B43A900995586 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB7F1E1B43A900995586 /* ViewController.m */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86ADE9C91E1CD3E6001E4783 /* UIView+HFYFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HFYFrame.h"; sourceTree = "<group>"; };
+		86ADE9CA1E1CD3E6001E4783 /* UIView+HFYFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HFYFrame.m"; sourceTree = "<group>"; };
+		86ADE9CD1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HFYLifecycle.h"; sourceTree = "<group>"; };
+		86ADE9CE1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HFYLifecycle.m"; sourceTree = "<group>"; };
 		86CAAB751E1B43A800995586 /* iOSToolbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSToolbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CAAB791E1B43A800995586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86CAAB7B1E1B43A900995586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86ADE9CC1E1CD46F001E4783 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				86ADE9CD1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.h */,
+				86ADE9CE1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		86CAAB6C1E1B43A800995586 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +136,7 @@
 		86CAAB9E1E1B445E00995586 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				86ADE9CC1E1CD46F001E4783 /* UIViewController */,
 				86CAABA31E1B45FD00995586 /* UIView */,
 				86CAAB9F1E1B445E00995586 /* UIColor */,
 			);
@@ -141,6 +157,8 @@
 			children = (
 				86CAABA41E1B461300995586 /* UIView+HFYFindView.h */,
 				86CAABA51E1B461300995586 /* UIView+HFYFindView.m */,
+				86ADE9C91E1CD3E6001E4783 /* UIView+HFYFrame.h */,
+				86ADE9CA1E1CD3E6001E4783 /* UIView+HFYFrame.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -251,9 +269,11 @@
 			files = (
 				86CAAB801E1B43A900995586 /* ViewController.m in Sources */,
 				86CAAB7D1E1B43A900995586 /* AppDelegate.m in Sources */,
+				86ADE9CB1E1CD3E6001E4783 /* UIView+HFYFrame.m in Sources */,
 				86CAAB7A1E1B43A800995586 /* main.m in Sources */,
 				86CAABA21E1B447900995586 /* UIColor+HFYHEX.m in Sources */,
 				86CAABA61E1B461300995586 /* UIView+HFYFindView.m in Sources */,
+				86ADE9CF1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
