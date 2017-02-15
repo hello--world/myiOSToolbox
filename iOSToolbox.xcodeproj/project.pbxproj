@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		86ADE9CB1E1CD3E6001E4783 /* UIView+HFYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ADE9CA1E1CD3E6001E4783 /* UIView+HFYFrame.m */; };
 		86ADE9CF1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ADE9CE1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m */; };
+		86C878E71E5441F9004B03FB /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C878E61E5441F9004B03FB /* UIView+Layer.m */; };
 		86CAAB7A1E1B43A800995586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB791E1B43A800995586 /* main.m */; };
 		86CAAB7D1E1B43A900995586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB7C1E1B43A900995586 /* AppDelegate.m */; };
 		86CAAB801E1B43A900995586 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB7F1E1B43A900995586 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 		86ADE9CA1E1CD3E6001E4783 /* UIView+HFYFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HFYFrame.m"; sourceTree = "<group>"; };
 		86ADE9CD1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HFYLifecycle.h"; sourceTree = "<group>"; };
 		86ADE9CE1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HFYLifecycle.m"; sourceTree = "<group>"; };
+		86C878E51E5441F8004B03FB /* UIView+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
+		86C878E61E5441F9004B03FB /* UIView+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layer.m"; sourceTree = "<group>"; };
 		86CAAB751E1B43A800995586 /* iOSToolbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSToolbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CAAB791E1B43A800995586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86CAAB7B1E1B43A900995586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				86CAABA51E1B461300995586 /* UIView+HFYFindView.m */,
 				86ADE9C91E1CD3E6001E4783 /* UIView+HFYFrame.h */,
 				86ADE9CA1E1CD3E6001E4783 /* UIView+HFYFrame.m */,
+				86C878E51E5441F8004B03FB /* UIView+Layer.h */,
+				86C878E61E5441F9004B03FB /* UIView+Layer.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				86CAAB7D1E1B43A900995586 /* AppDelegate.m in Sources */,
 				86ADE9CB1E1CD3E6001E4783 /* UIView+HFYFrame.m in Sources */,
 				86CAAB7A1E1B43A800995586 /* main.m in Sources */,
+				86C878E71E5441F9004B03FB /* UIView+Layer.m in Sources */,
 				86CAABA21E1B447900995586 /* UIColor+HFYHEX.m in Sources */,
 				86CAABA61E1B461300995586 /* UIView+HFYFindView.m in Sources */,
 				86ADE9CF1E1CD4B8001E4783 /* UIViewController+HFYLifecycle.m in Sources */,
