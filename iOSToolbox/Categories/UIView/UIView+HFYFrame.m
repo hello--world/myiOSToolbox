@@ -28,55 +28,55 @@
     return CGRectGetMaxX(self.frame);
 }
 
-- (void)setJk_right:(CGFloat)right
+- (void)setHfy_right:(CGFloat)right
 {
     CGRect frame = self.frame;
     frame.origin.x = right - self.frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)jk_bottom
+- (CGFloat)hfy_bottom
 {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setJk_bottom:(CGFloat)bottom
+- (void)setHfy_bottom:(CGFloat)bottom
 {
     CGRect frame = self.frame;
     frame.origin.y = bottom - self.frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)jk_left
+- (CGFloat)hfy_left
 {
     return self.frame.origin.x;
 }
 
-- (void)setJk_left:(CGFloat)x
+- (void)setHfy_left:(CGFloat)x
 {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)jk_width
+- (CGFloat)hfy_width
 {
     return self.frame.size.width;
 }
 
-- (void)setJk_width:(CGFloat)width
+- (void)setHfy_width:(CGFloat)width
 {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)jk_height
+- (CGFloat)hfy_height
 {
     return self.frame.size.height;
 }
 
-- (void)setJk_height:(CGFloat)height
+- (void)setHfy_height:(CGFloat)height
 {
     CGRect frame = self.frame;
     frame.size.height = height;
@@ -85,40 +85,40 @@
 
 #pragma mark - Shortcuts for frame properties
 
-- (CGPoint)jk_origin {
+- (CGPoint)hfy_origin {
     return self.frame.origin;
 }
 
-- (void)setJk_origin:(CGPoint)origin {
+- (void)setHfy_origin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
 }
 
-- (CGSize)jk_size {
+- (CGSize)hfy_size {
     return self.frame.size;
 }
 
-- (void)setJk_size:(CGSize)size {
+- (void)setHfy_size:(CGSize)size {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;
 }
 #pragma mark - Shortcuts for positions
 
-- (CGFloat)jk_centerX {
+- (CGFloat)hfy_centerX {
     return self.center.x;
 }
 
-- (void)setJk_centerX:(CGFloat)centerX {
+- (void)setHfy_centerX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
 
-- (CGFloat)jk_centerY {
+- (CGFloat)hfy_centerY {
     return self.center.y;
 }
 
-- (void)setJk_centerY:(CGFloat)centerY {
+- (void)setHfy_centerY:(CGFloat)centerY {
     self.center = CGPointMake(self.center.x, centerY);
 }
 
