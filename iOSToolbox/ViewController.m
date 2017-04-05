@@ -43,6 +43,28 @@
         [alert.view fy_findSuberViewWithSuperView:@"_UIVisualEffectFilterView" callBackBlock:^(UIView *needView) {
             NSLog(@"view -- >> %@",needView );
         } allView:YES];
+//
+//        [alert.view fy_findSuberViewWithSuperView:@"UIView" callBackBlock:^(UIView *needView) {
+//            NSLog(@"view -- >> %@",needView );
+//        } allView:YES];
+//        [alert.view fy_findSuberViewWithSuperView:@"UIView" callBackBlock:^(UIView *needView) {
+//            NSLog(@"view -- >> %@",needView );
+//        } allView:NO];
+      
+        [alert.view fy_findSuberViewWithSuperView:^(UIView *view) {
+            NSLog(@"view1 -- >> %@",view );
+
+        } conditionBlock:^BOOL(UIView *view) {
+            return [view isKindOfClass:[UIView class]];
+        } allView:NO];
+        
+        [alert.view fy_findSuberViewWithSuperView:^(UIView *view) {
+            NSLog(@"view2 -- >> %@",view );
+            
+        } conditionBlock:^BOOL(UIView *view) {
+            return [view isKindOfClass:[UIView class]];
+        } allView:YES];
+        
     }];
     
 }

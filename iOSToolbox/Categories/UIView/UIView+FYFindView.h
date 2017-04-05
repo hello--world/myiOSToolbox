@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^FindViewBlock)(UIView *view);
+typedef BOOL(^ConditionBlock)(UIView *view);
+
 @interface UIView (FYFindView)
 
 /**
@@ -25,7 +28,7 @@
  @param callBackBlock 回调block
  @param allView 是否需要查找所有满足条件的View,YES所有，NO第一个
  */
-- (void)fy_findSuberViewWithSuperView:(NSString *)viewClassName callBackBlock:(void(^)(UIView *))callBackBlock allView:(BOOL)allView;
+- (void)fy_findSuberViewWithSuperView:(NSString *)viewClassName callBackBlock:(FindViewBlock)callBackBlock allView:(BOOL)allView;
 /**
  从父视图查找子视图
 
@@ -33,6 +36,6 @@
  @param conditionBlock 查找条件
  @param allView 是否需要查找所有满足条件的View,YES所有，NO第一个
  */
-- (void)fy_findSuberViewWithSuperView:(void(^)(UIView *))callBackBlock conditionBlock:(BOOL(^)(UIView *))conditionBlock allView:(BOOL)allView;
+- (void)fy_findSuberViewWithSuperView:(FindViewBlock)callBackBlock conditionBlock:(ConditionBlock)conditionBlock allView:(BOOL)allView;
 
 @end
