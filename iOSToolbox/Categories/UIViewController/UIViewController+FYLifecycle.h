@@ -1,5 +1,5 @@
 //
-//  UIViewController+HFYLifecycle.h
+//  UIViewController+FYLifecycle.h
 //  iOSToolbox
 //
 //  Created by HeFengyang on 2017/1/4.
@@ -10,6 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (HFYLifecycle)
+@interface UIViewController (FYLifecycle)
 
 @end

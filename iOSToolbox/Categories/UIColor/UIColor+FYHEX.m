@@ -1,14 +1,14 @@
 //
-//  UIColor+HFYHEX.m
+//  UIColor+FYHEX.m
 //  iOSToolbox
 //
 //  Created by HeFengyang on 2017/1/3.
 //  Copyright © 2017年 HeFengyang. All rights reserved.
 //
 
-#import "UIColor+HFYHEX.h"
+#import "UIColor+FYHEX.h"
 
-CGFloat hfy_colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length) {
+CGFloat fy_colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length) {
     NSString *substring = [string substringWithRange:NSMakeRange(start, length)];
     NSString *fullHex = length == 2 ? substring : [NSString stringWithFormat: @"%@%@", substring, substring];
     
@@ -16,49 +16,49 @@ CGFloat hfy_colorComponentFrom(NSString *string, NSUInteger start, NSUInteger le
     [[NSScanner scannerWithString: fullHex] scanHexInt: &hexComponent];
     return hexComponent / 255.0;
 }
-@implementation UIColor (HFYHEX)
+@implementation UIColor (FYHEX)
 
-+ (UIColor *)hfy_colorWithHex:(UInt32)hex{
-    return [UIColor hfy_colorWithHex:hex andAlpha:1];
++ (UIColor *)fy_colorWithHex:(UInt32)hex{
+    return [UIColor fy_colorWithHex:hex andAlpha:1];
 }
-+ (UIColor *)hfy_colorWithHex:(UInt32)hex andAlpha:(CGFloat)alpha{
++ (UIColor *)fy_colorWithHex:(UInt32)hex andAlpha:(CGFloat)alpha{
     return [UIColor colorWithRed:((hex >> 16) & 0xFF)/255.0
                            green:((hex >> 8) & 0xFF)/255.0
                             blue:(hex & 0xFF)/255.0
                            alpha:alpha];
 }
 
-+ (UIColor *)hfy_colorWithHexString:(NSString *)hexString {
++ (UIColor *)fy_colorWithHexString:(NSString *)hexString {
     CGFloat alpha, red, blue, green;
     
     NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
     switch ([colorString length]) {
         case 3: // #RGB
             alpha = 1.0f;
-            red   = hfy_colorComponentFrom(colorString, 0, 1);
-            green = hfy_colorComponentFrom(colorString, 1, 1);
-            blue  = hfy_colorComponentFrom(colorString, 2, 1);
+            red   = fy_colorComponentFrom(colorString, 0, 1);
+            green = fy_colorComponentFrom(colorString, 1, 1);
+            blue  = fy_colorComponentFrom(colorString, 2, 1);
             break;
             
         case 4: // #ARGB
-            alpha = hfy_colorComponentFrom(colorString, 0, 1);
-            red   = hfy_colorComponentFrom(colorString, 1, 1);
-            green = hfy_colorComponentFrom(colorString, 2, 1);
-            blue  = hfy_colorComponentFrom(colorString, 3, 1);
+            alpha = fy_colorComponentFrom(colorString, 0, 1);
+            red   = fy_colorComponentFrom(colorString, 1, 1);
+            green = fy_colorComponentFrom(colorString, 2, 1);
+            blue  = fy_colorComponentFrom(colorString, 3, 1);
             break;
             
         case 6: // #RRGGBB
             alpha = 1.0f;
-            red   = hfy_colorComponentFrom(colorString, 0, 2);
-            green = hfy_colorComponentFrom(colorString, 2, 2);
-            blue  = hfy_colorComponentFrom(colorString, 4, 2);
+            red   = fy_colorComponentFrom(colorString, 0, 2);
+            green = fy_colorComponentFrom(colorString, 2, 2);
+            blue  = fy_colorComponentFrom(colorString, 4, 2);
             break;
             
         case 8: // #AARRGGBB
-            alpha = hfy_colorComponentFrom(colorString, 0, 2);
-            red   = hfy_colorComponentFrom(colorString, 2, 2);
-            green = hfy_colorComponentFrom(colorString, 4, 2);
-            blue  = hfy_colorComponentFrom(colorString, 6, 2);
+            alpha = fy_colorComponentFrom(colorString, 0, 2);
+            red   = fy_colorComponentFrom(colorString, 2, 2);
+            green = fy_colorComponentFrom(colorString, 4, 2);
+            blue  = fy_colorComponentFrom(colorString, 6, 2);
             break;
             
         default:
@@ -67,7 +67,7 @@ CGFloat hfy_colorComponentFrom(NSString *string, NSUInteger start, NSUInteger le
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-- (NSString *)hfy_HEXString{
+- (NSString *)fy_HEXString{
     UIColor* color = self;
     if (CGColorGetNumberOfComponents(color.CGColor) < 4) {
         const CGFloat *components = CGColorGetComponents(color.CGColor);
@@ -84,7 +84,7 @@ CGFloat hfy_colorComponentFrom(NSString *string, NSUInteger start, NSUInteger le
             (int)((CGColorGetComponents(color.CGColor))[2]*255.0)];
 }
 
-+ (UIColor *)hfy_colorWithWholeRed:(CGFloat)red
++ (UIColor *)fy_colorWithWholeRed:(CGFloat)red
                             green:(CGFloat)green
                              blue:(CGFloat)blue
                             alpha:(CGFloat)alpha
@@ -95,11 +95,11 @@ CGFloat hfy_colorComponentFrom(NSString *string, NSUInteger start, NSUInteger le
                            alpha:alpha];
 }
 
-+ (UIColor *)hfy_colorWithWholeRed:(CGFloat)red
++ (UIColor *)fy_colorWithWholeRed:(CGFloat)red
                             green:(CGFloat)green
                              blue:(CGFloat)blue
 {
-    return [self hfy_colorWithWholeRed:red
+    return [self fy_colorWithWholeRed:red
                                 green:green
                                  blue:blue
                                 alpha:1.0];

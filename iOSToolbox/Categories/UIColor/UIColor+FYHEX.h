@@ -1,5 +1,5 @@
 //
-//  UIColor+HFYHEX.h
+//  UIColor+FYHEX.h
 //  iOSToolbox
 //
 //  Created by HeFengyang on 2017/1/3.
@@ -8,18 +8,18 @@
 // 搬运
 #import <UIKit/UIKit.h>
 
-@interface UIColor (HFYHEX)
-+ (UIColor *)hfy_colorWithHex:(UInt32)hex;
-+ (UIColor *)hfy_colorWithHex:(UInt32)hex andAlpha:(CGFloat)alpha;
-+ (UIColor *)hfy_colorWithHexString:(NSString *)hexString;
-- (NSString *)hfy_HEXString;
+@interface UIColor (FYHEX)
++ (UIColor *)fy_colorWithHex:(UInt32)hex;
++ (UIColor *)fy_colorWithHex:(UInt32)hex andAlpha:(CGFloat)alpha;
++ (UIColor *)fy_colorWithHexString:(NSString *)hexString;
+- (NSString *)fy_HEXString;
 ///值不需要除以255.0
-+ (UIColor *)hfy_colorWithWholeRed:(CGFloat)red
++ (UIColor *)fy_colorWithWholeRed:(CGFloat)red
                             green:(CGFloat)green
                              blue:(CGFloat)blue
                             alpha:(CGFloat)alpha;
 ///值不需要除以255.0
-+ (UIColor *)hfy_colorWithWholeRed:(CGFloat)red
++ (UIColor *)fy_colorWithWholeRed:(CGFloat)red
                             green:(CGFloat)green
                              blue:(CGFloat)blue;
 @end
