@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+FYFindView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self findSuberViews:nil];
+
+}
+
+- (void)findSuberViews:(UIView *)superView {
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"哈哈" message:@"呵呵" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *alertAction1 = [UIAlertAction actionWithTitle:@"测试1" style:UIAlertActionStyleDefault handler:NULL];
+    UIAlertAction *alertAction2 = [UIAlertAction actionWithTitle:@"测试2" style:UIAlertActionStyleDefault handler:NULL];
+    UIAlertAction *alertAction3 = [UIAlertAction actionWithTitle:@"测试3" style:UIAlertActionStyleDefault handler:NULL];
+    
+    [alert addAction:alertAction1];
+    [alert addAction:alertAction2];
+    [alert addAction:alertAction3];
+
+    [self presentViewController:alert animated:YES completion:^{
+
+        [alert.view fy_findSuberViewWithSuperView:@"_UIVisualEffectFilterView" callBackBlock:^(UIView *needView) {
+            NSLog(@"view -- >> %@",needView );
+        } allView:YES];
+    }];
+    
 }
 
 
