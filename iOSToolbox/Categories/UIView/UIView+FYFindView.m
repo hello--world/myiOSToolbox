@@ -24,7 +24,9 @@
     
     NSArray *suberViews = self.subviews;
     [suberViews enumerateObjectsUsingBlock:^(UIView *subView, NSUInteger idx, BOOL * _Nonnull stop) {
-       
+#if DEBUG
+        NSLog(@"view -->%@",subView);
+#endif
         if (conditionBlock(subView)) {
             if (callBackBlock) {
                 callBackBlock(subView);
