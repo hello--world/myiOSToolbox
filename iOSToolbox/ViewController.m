@@ -69,6 +69,10 @@
     
 }
 
+- (void)dealloc {
+    NSLog(@"哈哈哈%@",self);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
