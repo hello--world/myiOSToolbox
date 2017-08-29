@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		86ADE9CB1E1CD3E6001E4783 /* UIView+FYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ADE9CA1E1CD3E6001E4783 /* UIView+FYFrame.m */; };
-		86ADE9CF1E1CD4B8001E4783 /* UIViewController+FYLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 86ADE9CE1E1CD4B8001E4783 /* UIViewController+FYLifecycle.m */; };
 		86C878E71E5441F9004B03FB /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C878E61E5441F9004B03FB /* UIView+Layer.m */; };
 		86CAAB7A1E1B43A800995586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB791E1B43A800995586 /* main.m */; };
 		86CAAB7D1E1B43A900995586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB7C1E1B43A900995586 /* AppDelegate.m */; };
@@ -19,6 +18,8 @@
 		86CAAB931E1B43A900995586 /* iOSToolboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAAB921E1B43A900995586 /* iOSToolboxTests.m */; };
 		86CAABA21E1B447900995586 /* UIColor+FYHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAABA11E1B447900995586 /* UIColor+FYHEX.m */; };
 		86CAABA61E1B461300995586 /* UIView+FYFindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAABA51E1B461300995586 /* UIView+FYFindView.m */; };
+		C7081A5D1F555EE500120884 /* UIViewController+FYLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = C7081A5C1F555EE400120884 /* UIViewController+FYLifecycle.m */; };
+		C7081A621F55650000120884 /* NSObject+FYSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = C7081A611F55650000120884 /* NSObject+FYSwizzling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,6 @@
 /* Begin PBXFileReference section */
 		86ADE9C91E1CD3E6001E4783 /* UIView+FYFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FYFrame.h"; sourceTree = "<group>"; };
 		86ADE9CA1E1CD3E6001E4783 /* UIView+FYFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FYFrame.m"; sourceTree = "<group>"; };
-		86ADE9CD1E1CD4B8001E4783 /* UIViewController+FYLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FYLifecycle.h"; sourceTree = "<group>"; };
-		86ADE9CE1E1CD4B8001E4783 /* UIViewController+FYLifecycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FYLifecycle.m"; sourceTree = "<group>"; };
 		86C878E51E5441F8004B03FB /* UIView+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
 		86C878E61E5441F9004B03FB /* UIView+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layer.m"; sourceTree = "<group>"; };
 		86CAAB751E1B43A800995586 /* iOSToolbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSToolbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +54,10 @@
 		86CAABA11E1B447900995586 /* UIColor+FYHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FYHEX.m"; sourceTree = "<group>"; };
 		86CAABA41E1B461300995586 /* UIView+FYFindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FYFindView.h"; sourceTree = "<group>"; };
 		86CAABA51E1B461300995586 /* UIView+FYFindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FYFindView.m"; sourceTree = "<group>"; };
+		C7081A5B1F555EE400120884 /* UIViewController+FYLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FYLifecycle.h"; sourceTree = "<group>"; };
+		C7081A5C1F555EE400120884 /* UIViewController+FYLifecycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FYLifecycle.m"; sourceTree = "<group>"; };
+		C7081A601F55650000120884 /* NSObject+FYSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FYSwizzling.h"; sourceTree = "<group>"; };
+		C7081A611F55650000120884 /* NSObject+FYSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FYSwizzling.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,15 +78,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86ADE9CC1E1CD46F001E4783 /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				86ADE9CD1E1CD4B8001E4783 /* UIViewController+FYLifecycle.h */,
-				86ADE9CE1E1CD4B8001E4783 /* UIViewController+FYLifecycle.m */,
-			);
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
 		86CAAB6C1E1B43A800995586 = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +133,9 @@
 		86CAAB9E1E1B445E00995586 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C7081A5E1F55645C00120884 /* Foundation */,
+				C7081A591F555EC000120884 /* UIKit */,
 				86D7942A1E947E820037B934 /* NSArray */,
-				86ADE9CC1E1CD46F001E4783 /* UIViewController */,
 				86CAABA31E1B45FD00995586 /* UIView */,
 				86CAAB9F1E1B445E00995586 /* UIColor */,
 			);
@@ -174,6 +169,40 @@
 			children = (
 			);
 			path = NSArray;
+			sourceTree = "<group>";
+		};
+		C7081A591F555EC000120884 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C7081A5A1F555ED100120884 /* ViewController */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		C7081A5A1F555ED100120884 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7081A5B1F555EE400120884 /* UIViewController+FYLifecycle.h */,
+				C7081A5C1F555EE400120884 /* UIViewController+FYLifecycle.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C7081A5E1F55645C00120884 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				C7081A5F1F55649E00120884 /* NSObject */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		C7081A5F1F55649E00120884 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				C7081A601F55650000120884 /* NSObject+FYSwizzling.h */,
+				C7081A611F55650000120884 /* NSObject+FYSwizzling.m */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +315,9 @@
 				86CAAB7A1E1B43A800995586 /* main.m in Sources */,
 				86C878E71E5441F9004B03FB /* UIView+Layer.m in Sources */,
 				86CAABA21E1B447900995586 /* UIColor+FYHEX.m in Sources */,
+				C7081A621F55650000120884 /* NSObject+FYSwizzling.m in Sources */,
 				86CAABA61E1B461300995586 /* UIView+FYFindView.m in Sources */,
-				86ADE9CF1E1CD4B8001E4783 /* UIViewController+FYLifecycle.m in Sources */,
+				C7081A5D1F555EE500120884 /* UIViewController+FYLifecycle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
