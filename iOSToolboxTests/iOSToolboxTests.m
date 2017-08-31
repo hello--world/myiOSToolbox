@@ -27,6 +27,8 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSURL *url = [NSURL URLWithString:@"hfy://safemode"];
+    NSLog(@"---%@",url.host);
 }
 
 - (void)testPerformanceExample {

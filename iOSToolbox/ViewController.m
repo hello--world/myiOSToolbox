@@ -22,7 +22,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [self findSuberViews:nil];
+//    [self findSuberViews:nil];
+    NSURL *url = [NSURL URLWithString:@"hfy://safemode"];
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+        NSLog(@"完成啦");
+    }];
 
 }
 

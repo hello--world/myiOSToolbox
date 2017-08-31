@@ -1,14 +1,16 @@
 //
 //  AppDelegate.m
-//  iOSToolbox
+//  FYSafeMode
 //
-//  Created by HeFengyang on 2017/1/3.
-//  Copyright © 2017年 HeFengyang. All rights reserved.
+//  Created by hfy on 2017/8/31.
+//  Copyright © 2017年 hihfy. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
+// 解决应用已经运行的情况下，给提示的问题，名字有点修改
+@property (nonatomic, assign) BOOL isSafeModeHandleURL;
 
 @end
 
@@ -16,16 +18,34 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // fy://safemode
     // Override point for customization after application launch.
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"test" message:[NSString stringWithFormat:@"%@",launchOptions] delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil, nil];
-    [alert show];
-//
-    NSString *url = launchOptions[UIApplicationLaunchOptionsURLKey];
-    if ([url pathExtension]) {
-        
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"test" message:[NSString stringWithFormat:@"%@",launchOptions] delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil, nil];
+//    [alert show];
+    //
+
+    // 点击通知页可以
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    NSURL *url = launchOptions[UIApplicationLaunchOptionsURLKey];
+    BOOL needSetup = YES;
+    UIViewController *rootVC = nil;
+    self.isSafeModeHandleURL = YES;
+    if (url) {
+        if ([[url host] isEqualToString:@"safemode"]) {
+            self.isSafeModeHandleURL = NO;
+
+            needSetup = NO;
+            rootVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FYSafeModeViewController"];
+        }
+    } else {
+        rootVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
     }
     
+    if (needSetup) {
+    // setup
+    }
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -57,8 +77,15 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
-    NSLog(@"%@",url);
+    if ([[url host] isEqualToString:@"safemode"] && self.isSafeModeHandleURL) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请关闭应用后再通过该方式打开" message:[NSString stringWithFormat:@"%@",options] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+    }
     return YES;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    abort();
 }
 
 @end
