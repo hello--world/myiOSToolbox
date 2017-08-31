@@ -11,3 +11,7 @@
 @interface UIViewController (FYLifecycle)
 
 @end
+
+@interface UINavigationController (FYLifecycle)
+
+@end
